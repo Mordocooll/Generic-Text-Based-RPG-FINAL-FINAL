@@ -2,12 +2,13 @@ from tkinter import *
 from PIL import Image, ImageTk
 import subprocess
 
+#window setup
 root = Tk()
 root.title("Username Input with Background")
-root.geometry("1920x1080")  # Adjust to fit the background image
+root.geometry("1920x1080")  
 
 # Background image setup
-bg_image = Image.open("file.png")  # Replace with your image file
+bg_image = Image.open("file.png")  
 bg_image = bg_image.resize((1920, 1080), Image.Resampling.LANCZOS)
 bg_photo = ImageTk.PhotoImage(bg_image)
 
@@ -30,7 +31,7 @@ def clearFrames():
     frames.clear()
 
 def fight3():
-# Launch monster fight demo.py and close the current window
+# Launch monster fight 4.py and close the current window
     subprocess.Popen(["python", "monster fight Boss.py"])  # Runs game.py
     root.destroy()  # Close the meny.py window
 
@@ -38,7 +39,7 @@ def fight3():
 def open_frame9():
     clearFrames()
    
-    global text8  # Declare these as global
+    global text8  
     
     
     theNext8= Button(root, text="Next", font=("Times", 15), command=fight3)
