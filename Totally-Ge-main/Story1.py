@@ -2,9 +2,10 @@ from tkinter import *
 from PIL import Image, ImageTk
 import subprocess
 
+#setting up window
 root = Tk()
 root.title("Username Input with Background")
-root.geometry("1920x1080")  # Adjust to fit the background image
+root.geometry("1920x1080")
 
 # Background image setup
 bg_image = Image.open("file.png")  # Replace with your image file
@@ -29,16 +30,15 @@ def clearFrames():
     #it is now an empty list
     frames.clear()
 
+#function to close window and open new one
 def fight1():
-# Launch monster fight demo.py and close the current window
-    subprocess.Popen(["python", "monster fight 1.py"])  # Runs game.py
-    root.destroy()  # Close the meny.py window
+    subprocess.Popen(["python", "monster fight 1.py"])
+    root.destroy()
 
 def open_frame1():
     #If there is any frames from previous windows (frame 2, frame 3) clear those frames
     clearFrames()
 
-    #global variables for windows
     global label_window, username_window, userSubmit, outputWindow
 
 
@@ -47,6 +47,7 @@ def open_frame1():
     #Appending label_window adds to the frames list (see line 20)
     frames.append(label_window)
 
+    #username entry
     username = Entry(root, font=("Times", 28), width=30)
     username_window = canvas.create_window(885, 375, anchor="nw", window=username)
     #add to frames list
@@ -116,7 +117,7 @@ def open_frame2():
 def open_frame3():
     clearFrames()
     
-    global text2  # Declare these as global
+    global text2
         
     theNext2= Button(root, text="Next", font=("Times", 15), command=open_frame4)
     theNextWindow2 = canvas.create_window(950, 950, anchor="nw", window=theNext2)
@@ -235,7 +236,7 @@ def open_frame7():
 def open_frame8():
     clearFrames()
    
-    global text7  # Declare these as global
+    global text7 
     
     
     theNext7= Button(root, text="Next", font=("Times", 15), command=open_frame9)
@@ -261,7 +262,7 @@ def open_frame8():
 def open_frame9():
     clearFrames()
    
-    global text8  # Declare these as global
+    global text8 
     
     
     theNext8= Button(root, text="Next", font=("Times", 15), command=open_frame9)
