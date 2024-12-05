@@ -119,7 +119,6 @@ def start_game():
             monster_label.config(state="disabled")
             win += 1
             print(win)
-        #need to change so it compares new death or win with the new one to retart or continue story
         if win == 1:
             move_on_btn.config(state = 'normal')
 
