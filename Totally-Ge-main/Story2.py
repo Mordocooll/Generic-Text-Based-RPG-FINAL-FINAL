@@ -4,10 +4,10 @@ import subprocess
 
 root = Tk()
 root.title("Username Input with Background")
-root.geometry("1920x1080")  # Adjust to fit the background image
+root.geometry("1920x1080") 
 
 # Background image setup
-bg_image = Image.open("file.png")  # Replace with your image file
+bg_image = Image.open("file.png") 
 bg_image = bg_image.resize((1920, 1080), Image.Resampling.LANCZOS)
 bg_photo = ImageTk.PhotoImage(bg_image)
 
@@ -30,9 +30,9 @@ def clearFrames():
     frames.clear()
 
 def fight2():
-# Launch monster fight demo.py and close the current window
-    subprocess.Popen(["python", "monster fight 2.py"])  # Runs game.py
-    root.destroy()  # Close the meny.py window
+# Launch monster fight 2.py and close the current window
+    subprocess.Popen(["python", "monster fight 2.py"])  
+    root.destroy()  
 
 
 def open_frame5():   
